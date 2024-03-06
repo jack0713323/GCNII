@@ -94,13 +94,13 @@ for epoch in range(args.epochs):
     loss_tra,acc_tra = train()
     loss_val,acc_val = validate()
     if(epoch+1)%1 == 0: 
-        print('Epoch:{:04d}'.format(epoch+1),
+        '''print('Epoch:{:04d}'.format(epoch+1),
             'train',
             'loss:{:.3f}'.format(loss_tra),
             'acc:{:.2f}'.format(acc_tra*100),
             '| val',
             'loss:{:.3f}'.format(loss_val),
-            'acc:{:.2f}'.format(acc_val*100))
+            'acc:{:.2f}'.format(acc_val*100))'''
     if loss_val < best:
         best = loss_val
         best_epoch = epoch
@@ -116,8 +116,8 @@ for epoch in range(args.epochs):
 if args.test:
     acc = test()[1]
 
-#print("Train cost: {:.4f}s".format(time.time() - t_total))
-#print('Load {}th epoch'.format(best_epoch))
+print("Train cost: {:.4f}s".format(time.time() - t_total))
+print('Load {}th epoch'.format(best_epoch))
 print("Test" if args.test else "Val","acc.:{:.1f}".format(acc*100))
     
 
