@@ -116,8 +116,8 @@ for epoch in range(args.epochs):
 if args.test:
     acc = test()[1]
 
-print("Train cost: {:.4f}s".format(time.time() - t_total))
-print('Load {}th epoch'.format(best_epoch))
+#print("Train cost: {:.4f}s".format(time.time() - t_total))
+#print('Load {}th epoch'.format(best_epoch))
 print("Test" if args.test else "Val","acc.:{:.1f}".format(acc*100))
     
 
