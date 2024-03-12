@@ -22,7 +22,7 @@ parser.add_argument('--layer', type=int, default=64, help='Number of layers.')
 parser.add_argument('--hidden', type=int, default=64, help='hidden dimensions.')
 
 parser.add_argument('--op', type=int, default=2, help='optimizer.')
-parser.add_argument('--act', type=int, default=0, help='activation .')
+parser.add_argument('--act_fn', type=int, default=0, help='activation .')
 
 
 parser.add_argument('--dropout', type=float, default=0.6, help='Dropout rate (1 - keep probability).')
@@ -57,7 +57,7 @@ model = GCNII(nfeat=features.shape[1],
                 lamda = args.lamda, 
                 alpha=args.alpha,
                 variant=args.variant,
-                act=args.act).to(device)
+                act_fn=args.act_fn).to(device)
 if args.op==0:
     optimizer = optim.Adam([
                             {'params':model.params1,'weight_decay':args.wd1},
