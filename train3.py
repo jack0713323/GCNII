@@ -56,7 +56,7 @@ model = GCNII(nfeat=features.shape[1],
                 dropout=args.dropout,
                 lamda = args.lamda, 
                 alpha=args.alpha,
-                variant=args.variant
+                variant=args.variant,
                 act=args.act).to(device)
 if args.op==0:
     optimizer = optim.Adam([
