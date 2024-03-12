@@ -39,7 +39,7 @@ class GraphConvolution(nn.Module):
         return output
 
 class GCNII(nn.Module):
-    def __init__(self, nfeat, nlayers,nhidden, nclass, dropout, lamda, alpha, variant,act_fn):
+    def __init__(self, nfeat, nlayers,nhidden, nclass, dropout, lamda, alpha, variant):
         super(GCNII, self).__init__()
         self.convs = nn.ModuleList()
         for _ in range(nlayers):
@@ -49,12 +49,7 @@ class GCNII(nn.Module):
         self.fcs.append(nn.Linear(nhidden, nclass))
         self.params1 = list(self.convs.parameters())
         self.params2 = list(self.fcs.parameters())
-        if act_fn==0:
-            self.act_fn = nn.ReLU()
-        elif act_fn==1:
-            self.act_fn = nn.Tanh()
-        elif act_fn==2:
-            self.act_fn = nn.LeakyReLU()
+        self.act_fn = nn.ReLU()
         self.dropout = dropout
         self.alpha = alpha
         self.lamda = lamda
