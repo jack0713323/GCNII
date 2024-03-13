@@ -65,7 +65,8 @@ model = GCNII(nfeat=features.shape[1],
 optimizer = optim.SGD([
                         {'params':model.params1, 'weight_decay':args.wd1},
                         {'params':model.params2, 'weight_decay':args.wd2},
-                      ], lr=args.lr)
+                      ], lr=args.lr, momentum=0.9)
+
 
 
 def train():
