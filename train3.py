@@ -8,7 +8,7 @@ import torch
 import torch.nn.functional as F
 import torch.optim as optim
 from utils import *
-from model import *
+from modelnew import *
 import uuid
 
 # Training settings
