@@ -57,11 +57,11 @@ model = GCNII(nfeat=features.shape[1],
                 variant=args.variant).to(device)
 
 
-optimizer = optim.AdamW([
+optimizer = optim.Adagrad([
                         {'params':model.params1,'weight_decay':args.wd1},
                         {'params':model.params2,'weight_decay':args.wd2},
                         ],lr=args.lr)
-#Adagrad
+
 
 def train():
     model.train()
