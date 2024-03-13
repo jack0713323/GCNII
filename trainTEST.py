@@ -62,10 +62,11 @@ model = GCNII(nfeat=features.shape[1],
                         #{'params':model.params2,'weight_decay':args.wd2},
                         #],lr=args.lr)
 
-optimizer = optim.SGD([
+optimizer = optim.Adadelta([
                         {'params':model.params1, 'weight_decay':args.wd1},
                         {'params':model.params2, 'weight_decay':args.wd2},
-                      ], lr=args.lr, momentum=0.9)
+                      ], lr=args.lr, rho=0.9, eps=1e-6)
+
 
 
 
