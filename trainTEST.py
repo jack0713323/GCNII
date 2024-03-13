@@ -62,10 +62,11 @@ model = GCNII(nfeat=features.shape[1],
                         #{'params':model.params2,'weight_decay':args.wd2},
                         #],lr=args.lr)
 
-optimizer = optim.Adadelta([
+optimizer = optim.RMSprop([
                         {'params':model.params1, 'weight_decay':args.wd1},
                         {'params':model.params2, 'weight_decay':args.wd2},
-                      ], lr=args.lr, rho=0.9, eps=1e-6)
+                      ], lr=args.lr, alpha=0.99, eps=1e-8, momentum=0, centered=False)
+
 
 
 
