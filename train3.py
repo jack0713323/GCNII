@@ -73,6 +73,12 @@ elif args.op==2:
                         {'params':model.params1,'weight_decay':args.wd1},
                         {'params':model.params2,'weight_decay':args.wd2},
                         ],lr=args.lr)
+elif args.op==3:
+    optimizer = optim.RMSprop([
+                        {'params':model.params1, 'weight_decay':args.wd1},
+                        {'params':model.params2, 'weight_decay':args.wd2},
+                      ], lr=args.lr, alpha=0.99, eps=1e-8, momentum=0, centered=False)
+
 
 def train():
     model.train()
