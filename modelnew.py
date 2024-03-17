@@ -55,8 +55,7 @@ class GCNII(nn.Module):
             self.act_fn = nn.Tanh()
         elif act_fn==2:
             self.act_fn = nn.LeakyReLU()
-        elif act_fn==3:
-            self.act_fn = nn.Sigmoid()
+
         self.dropout = dropout
         self.alpha = alpha
         self.lamda = lamda
