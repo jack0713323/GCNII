@@ -105,13 +105,13 @@ def train(datastr,splitstr):
         loss_tra,acc_tra = train_step(model,optimizer,features,labels,adj,idx_train)
         loss_val,acc_val = validate_step(model,features,labels,adj,idx_val)
         if(epoch+1)%1 == 0: 
-            print('Epoch:{:04d}'.format(epoch+1),
+            '''print('Epoch:{:04d}'.format(epoch+1),
                 'train',
                 'loss:{:.3f}'.format(loss_tra),
                 'acc:{:.2f}'.format(acc_tra*100),
                 '| val',
                 'loss:{:.3f}'.format(loss_val),
-                'acc:{:.2f}'.format(acc_val*100))
+                'acc:{:.2f}'.format(acc_val*100))'''
         if loss_val < best:
             best = loss_val
             torch.save(model.state_dict(), checkpt_file)
@@ -127,10 +127,10 @@ def train(datastr,splitstr):
 
 t_total = time.time()
 acc_list = []
-for i in range(10):
+for i in range(1):
     datastr = args.data
     splitstr = 'splits/'+args.data+'_split_0.6_0.2_'+str(i)+'.npz'
     acc_list.append(train(datastr,splitstr))
     print(i,": {:.2f}".format(acc_list[-1]))
-print("Train cost: {:.4f}s".format(time.time() - t_total))
+#print("Train cost: {:.4f}s".format(time.time() - t_total))
 print("Test acc.:{:.2f}".format(np.mean(acc_list)))
