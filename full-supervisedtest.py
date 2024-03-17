@@ -83,7 +83,8 @@ def train(datastr,splitstr):
                 dropout=args.dropout,
                 lamda = args.lamda, 
                 alpha=args.alpha,
-                variant=args.variant).to(device)
+                variant=args.variant,
+                act_fn=args.act_fn).to(device)
     optimizer = optim.Adam(model.parameters(), lr=args.lr,
                             weight_decay=args.weight_decay)
     if args.op==0:
