@@ -96,7 +96,7 @@ def train(datastr,splitstr):
     elif args.op==2:
         optimizer = optim.Adagrad(model.parameters(), lr=args.lr,
                             weight_decay=args.weight_decay)
-    elif args.op==2:
+    elif args.op==3:
         optimizer = optim.RMSprop(model.parameters(), lr=args.lr,
                             weight_decay=args.weight_decay, alpha=0.99, eps=1e-8, momentum=0, centered=False)
     bad_counter = 0
