@@ -117,7 +117,7 @@ for epoch in range(args.epochs):
     loss_tra,acc_tra = train()
     loss_val,acc_val = validate()
     if(epoch+1)%1 == 0: 
-        print('Epoch:{:04d}'.format(epoch+1),
+        print('Epoch:{:04d}'.format(epoch),
             'train',
             'loss:{:.3f}'.format(loss_tra),
             'acc:{:.2f}'.format(acc_tra*100),
