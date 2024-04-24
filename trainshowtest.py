@@ -110,7 +110,7 @@ def test():
     
 t_total = time.time()
 bad_counter = 0
-best = 0
+best = 999999
 best_epoch = 0
 acc = 0
 for epoch in range(args.epochs):
@@ -124,8 +124,8 @@ for epoch in range(args.epochs):
             '| val',
             'loss:{:.3f}'.format(loss_val),
             'acc:{:.2f}'.format(acc_val*100))
-    if acc_val > best:
-        best = acc_val
+    if loss_val < best:
+        best = loss_val
         best_epoch = epoch
         acc = acc_val
         torch.save(model.state_dict(), checkpt_file)
