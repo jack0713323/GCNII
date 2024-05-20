@@ -99,6 +99,15 @@ def train(datastr,splitstr):
     elif args.op==3:
         optimizer = optim.RMSprop(model.parameters(), lr=args.lr,
                             weight_decay=args.weight_decay, alpha=0.99, eps=1e-8, momentum=0, centered=False)
+    elif args.op == 4:
+        optimizer = optim.SGD(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+    elif args.op == 5:
+        optimizer = optim.SGD(model.parameters(), lr=args.lr, weight_decay=args.weight_decay, momentum=0.9)
+    elif args.op == 6:
+        optimizer = optim.Adadelta(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+    
+
+
     bad_counter = 0
     best = 999999999
     for epoch in range(args.epochs):
