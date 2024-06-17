@@ -1,4 +1,7 @@
 # Using improved SSO to optimize Graph Convolution Network neural architecture search and hyperparameter optimization
+
+This codebase is based on the github repo :
+https://github.com/chennnM/GCNII
 "Simple and Deep Graph Convolutional Networks".(https://arxiv.org/abs/2007.02133)
 
 ## Dependencies
