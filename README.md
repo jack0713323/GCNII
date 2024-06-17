@@ -53,9 +53,9 @@ python arxiv.py
 ```
 ## 補充
 ```
-請在kaggle之環境下開啟GPU100下執行以下檔案
 輸入:見資料夾DATA與SPILTS
 輸出:使用ALLGCNII或ALLMSSOGCNII輸出
+請在kaggle之環境下開啟GPU100下執行以下檔案
 各檔案功能
 ALLGCNII:復現GCNII結果 除了將模型改為可調整超參數與模型架構外 僅修復BUG 表現可對照原論文
 ALLMSSOGCNII:MSSOGCNII結果 表現可參照本研究論文
