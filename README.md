@@ -31,12 +31,4 @@ ALLMSSOGCNII:MSSOGCNII結果 表現可參照本研究論文
 搜尋:可使用MSSO搜索超參數與模型架構 僅以CORA為例 剩餘資料集以此推類
 其餘檔案功能同原論文之解釋 不多贅述
 ```
-## Citation
-```
-@article{chenWHDL2020gcnii,
-  title = {Simple and Deep Graph Convolutional Networks},
-  author = {Ming Chen, Zhewei Wei and Zengfeng Huang, Bolin Ding and Yaliang Li},
-  year = {2020},
-  booktitle = {Proceedings of the 37th International Conference on Machine Learning},
-}
-```
+
