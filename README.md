@@ -1,5 +1,6 @@
-# Simple and Deep Graph Convolutional Networks
-This repository contains a PyTorch implementation of "Simple and Deep Graph Convolutional Networks".(https://arxiv.org/abs/2007.02133)
+# Using improved SSO to optimize Graph Convolution Network neural architecture search and hyperparameter optimization
+"Simple and Deep Graph Convolutional Networks".(https://arxiv.org/abs/2007.02133)
+
 ## Dependencies
 - CUDA 10.1
 - python 3.6.9
