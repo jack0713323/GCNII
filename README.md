@@ -29,7 +29,8 @@ The `data` folder contains three benchmark datasets(Cora, Citeseer, Pubmed), and
 各檔案功能
 ALLGCNII:復現GCNII結果 除了將模型改為可調整超參數與模型架構外 僅修復BUG 表現可對照原論文
 ALLMSSOGCNII:MSSOGCNII結果 表現可參照本研究論文
-搜尋:可使用MSSO搜索超參數與模型架構 僅以CORA為例 剩餘資料集以此推類
+search:可使用MSSO搜索超參數與模型架構 僅以CORA為例 剩餘資料集以此推類 請以新版本search為主
+搜尋:可使用MSSO搜索超參數與模型架構 僅以CORA為例 剩餘資料集以此推類 舊版本 請以新版本search為主
 其餘檔案功能同原論文之解釋 不多贅述
 ```
 
